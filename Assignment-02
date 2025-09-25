@@ -1,0 +1,69 @@
+ASSIGNMENT -02
+NAME:NAKUL MAHLATHKAR
+USN:ENG24CY0037
+SECTION: “A”
+ROLL NO: 7
+
+
+1.What does the pwd,whoami and hostname display?
+ANS:
+Pwd-> prints the current working directory 
+Eg-/home/student
+Whoami->display the current logged in username.
+Hostname->shows the host name of the machine.
+
+2.write the command to create a dictionary named “project” inside /home/student and keep three.txt files into it.
+ANS:
+In bash
+Mkdir /home /student/project
+Cd/home/student/project
+Touch file1.txt  file2.txt  file3.txt
+ It will create dictionary and add three of it.
+
+3.difference between absolute path and relative path with example.
+ANS:
+Abosolute Path-> path that starts from the root /dictionary.
+Eg:/home/student/project/file.txt
+Relative Path->path relative to your current location.
+Eg:if you are in /home/student then project/file1.txt
+
+4.what command would you give the already excuted command traces in terminal?
+ANS:
+History
+
+5.compare the working functioallity to find and locate command. Which one is faster and why?
+ANS:
+Find->it searches the file by real time scanning the directory tree.
+Locate->searches for files using a pre built database
+
+6. Which command is used to modify the file permission in Linux? Give an example.
+ANS:
+Command-chmod
+Eg:chmod 744 file.txt
+
+7.A file has permission -rw-r --r--.what does it means?
+ANS:
+-	-> regular file
+rw  -> owner can read and write
+r-- ->group can only read
+r-   ->other can only read
+
+8. explain the difference between chown and chgrp with an example.
+ANS:
+->chown-changes the owner of a file.
+Eg: chown nak file.txt
+->chgrp-changes the group owner ship of a file.
+Eg:chgrp nak file.txt
+
+9. A file needs to accessible by multiple users but only write table by the owner. How will you set permission?
+ANS:
+->permission should be 
+-rw-r—r—r(644)
+->command:
+Chmod 644 file.txt
+10.how do you check manual page for any linux command?
+->commamd:
+Man <command>
+Eg: man ls
+
+
