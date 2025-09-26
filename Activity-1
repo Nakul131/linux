@@ -1,0 +1,547 @@
+Activity-1
+man command:
+1)ls -a:
+description:
+do not ignore entries starting with .
+output:
+raakin@ubuntu-25:~$ ls -a
+.              .bashrc  Documents  Music     Public                     Templates                                 .vboxclient-hostversion-tty2-control.pid     Videos
+..             .cache   Downloads  newc      snap                       .vboxclient-clipboard-tty2-control.pid    .vboxclient-seamless-tty2-control.pid        .viminfo
+.bash_history  .config  linx       Pictures  .ssh                       .vboxclient-clipboard-tty2-service.pid    .vboxclient-vmsvga-session-tty2-control.pid
+.bash_logout   Desktop  .local     .profile  .sudo_as_admin_successful  .vboxclient-draganddrop-tty2-control.pid  .vboxclient-vmsvga-session-tty2-service.pid
+remark:
+Lists all files and directories, including hidden ones (those starting with a dot).
+
+-----------------------------------------------------------------
+2)ls -b:
+description:
+print C-style escapes for nongraphic characters
+output:
+raakin@ubuntu-25:~$ ls -b
+Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
+remark:
+Prints C-style escapes for non-graphic characters in filenames .
+
+---------------------------------------------------------------
+3) ls -c:
+description:
+with -lt: sort by, and show, ctime (time of last change of file status information); with -l: show ctime and sort by name; otherwise: sort by ctime, newest first
+output:
+raakin@ubuntu-25:~$ ls -c
+snap  newc  Downloads  Pictures  linx  Documents  Music  Public  Videos  Templates  Desktop
+remark:
+When combined with the -t flag, it sorts files by their status change time (ctime) instead of their modification time.
+
+---------------------------------------------------------------
+4)ls -d:
+description:
+-d, --directory
+              list directories themselves, not their contents
+output:
+raakin@ubuntu-25:~$ ls -d
+.
+remark:
+Lists directories themselves rather than their contents.
+
+---------------------------------------------------------------
+5)ls -f:
+description:
+ -f     do not sort, enable -aU, disable -ls --color
+output:
+raakin@ubuntu-25:~$ ls -f
+.vboxclient-vmsvga-session-tty2-control.pid  .vboxclient-vmsvga-session-tty2-service.pid  snap	     .profile				       .ssh
+Documents				     ..						  Downloads  .sudo_as_admin_successful		       .vboxclient-clipboard-tty2-service.pid
+.cache					     newc					  linx	     Videos				       Templates
+.viminfo				     .bash_logout				  Music      .					       .vboxclient-seamless-tty2-control.pid
+Public					     .config					  Pictures   .vboxclient-hostversion-tty2-control.pid  Desktop
+.vboxclient-draganddrop-tty2-control.pid     .bash_history				  .bashrc    .vboxclient-clipboard-tty2-control.pid    .local
+remark:
+Lists entries in the order they're stored in the directory, without sorting them.
+--------------------------------------------------------------
+6)ls -g:
+description:
+  -g     like -l, but do not list owner
+output:
+raakin@ubuntu-25:~$ ls -g
+total 44
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 raakin 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 raakin 4096 Aug 18 10:18 linx
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 raakin 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 raakin 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Public
+drwx------ 8 raakin 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Videos
+remark:
+Produces a long format listing (-l) but omits the file's owner.
+
+-----------------------------------------------------------------
+7)ls -h:
+description:
+ -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+output:
+raakin@ubuntu-25:~$ ls -h
+Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
+remark:
+When used with a long listing (-l), it prints file sizes in human-readable format (e.g., 1K, 234M, 2G).
+------------------------------------------------------------------
+8)ls -i:
+description:
+-i, --inode
+              print the index number of each file
+output:
+raakin@ubuntu-25:~$ ls -i
+1480371 Desktop  1480375 Documents  1480372 Downloads  1480657 linx  1480376 Music  1483040 newc  1480377 Pictures  1480374 Public  1480240 snap  1480373 Templates  1480378 Videos
+remark:
+Prints the inode index number to the left of each filename.
+
+-------------------------------------------------------------------
+9)ls -k:
+description:
+ -k, --kibibytes
+              default to 1024-byte blocks for file system usage; used only with -s and per directory totals
+output:
+raakin@ubuntu-25:~$ ls -k
+Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
+remark:
+the ls -k command lists directory contents and shows file sizes in kilobytes.
+
+------------------------------------------------------------------
+10)ls -l
+description:
+-l     use a long listing format
+output:
+raakin@ubuntu-25:~$ ls -l
+total 44
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 raakin raakin 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 raakin raakin 4096 Aug 18 10:18 linx
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 raakin raakin 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 raakin raakin 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Public
+drwx------ 8 raakin raakin 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Videos
+remark:
+s -l lists all files and directories in the current directory in a detailed, long format.
+--------------------------------------------------------------------
+11)ls -m:
+description:
+ -m     fill width with a comma separated list of entries
+output:
+raakin@ubuntu-25:~$ ls -m
+Desktop, Documents, Downloads, linx, Music, newc, Pictures, Public, snap, Templates, Videos
+remark:
+ls -m displays the contents of a directory in a single line, with each entry separated by a comma.
+---------------------------------------------------------------------
+12)ls -n:
+description:
+-n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+output:
+raakin@ubuntu-25:~$ ls -n
+total 44
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 1000 1000 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 1000 1000 4096 Aug 18 10:18 linx
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 1000 1000 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 1000 1000 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Public
+drwx------ 8 1000 1000 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Videos
+remark:
+ls -n displays a long list of directory contents, but it uses the user and group ID numbers instead of their names.
+------------------------------------------------------------------------
+13)ls -o:
+description:
+like -l, but do not list group information
+output:
+raakin@ubuntu-25:~$ ls -o
+total 44
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 raakin 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 raakin 4096 Aug 28 09:00 linx
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 raakin 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 raakin 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Public
+drwx------ 8 raakin 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Videos
+remark:
+The command ls -o in Linux displays a detailed list of files while omitting the group ownership information from the output.
+
+-------------------------------------------------------------------------
+14) ls -p:
+descriprion:
+ -p, --indicator-style=slash
+              append / indicator to directories
+output:
+raakin@ubuntu-25:~$ ls -p
+Desktop/    Downloads/  Music/  Pictures/  snap/       Videos/
+Documents/  linx/       newc/   Public/    Templates/
+remark:
+The command ls -p in Linux lists files and directories, appending a forward slash / to directory names to distinguish them from files.
+
+-------------------------------------------------------------------------
+15)ls -q:
+description:
+ -q, --hide-control-chars
+              print ? instead of nongraphic characters
+output:
+raakin@ubuntu-25:~$ ls -q
+Desktop    Downloads  Music  Pictures  snap       Videos
+Documents  linx       newc   Public    Templates
+remarks:
+The command ls -q in Linux displays the contents of a directory, replacing non-printable characters in file names with question marks to ensure safe output.
+
+--------------------------------------------------------------------------
+16)ls -r:
+description:
+   -r, --reverse
+              reverse order while sorting
+output:
+raakin@ubuntu-25:~$ ls -r
+Videos     snap    Pictures  Music  Downloads  Desktop
+Templates  Public  newc      linx   Documents
+remarks:
+The command ls -r in Linux lists files and directories in reverse order, reversing the default sorting order, such as showing items from Z to A instead of A to Z.
+
+--------------------------------------------------------------------------
+17)ls -s:
+description:
+   -S     sort by file size, largest first
+
+output:
+raakin@ubuntu-25:~$ ls -s
+total 44
+4 Desktop    4 Downloads  4 Music  4 Pictures  4 snap       4 Videos
+4 Documents  4 linx       4 newc   4 Public    4 Templates
+remark:
+The command ls -s in Linux displays the size of each file in blocks alongside the file names when listing directory contents.
+
+--------------------------------------------------------------------------
+18)ls -t:
+description:
+  -t     sort by time, newest first; see --time
+output:
+raakin@ubuntu-25:~$ ls -t
+linx  Downloads  Pictures   Music   Videos     Desktop
+newc  snap       Documents  Public  Templates
+remark:
+The command ls -t in Linux sorts and lists files and directories by modification time, showing the newest files first.
+
+--------------------------------------------------------------------------
+19)ls -u:
+description:
+   -U     do not sort; list entries in directory order
+output:
+raakin@ubuntu-25:~$ ls -u
+Desktop    snap  Videos    newc   Documents  Public
+Templates  linx  Pictures  Music  Downloads
+remark:
+The command ls -u in Linux lists files and directories, sorting and displaying them by the last access time instead of the modification time.
+
+-------------------------------------------------------------------------
+20)ls -v:
+description:
+-v     natural sort of (version) numbers within text
+output:
+raakin@ubuntu-25:~$ ls -v
+Desktop    Downloads  Pictures  Templates  linx  snap
+Documents  Music      Public    Videos     newc
+remark:
+The command ls -v in Linux sorts and lists files in a natural version sort order, meaning it sorts numbers within filenames in a way that humans expect (e.g., file1, file2, file10) rather than simple ASCII sorting.
+
+--------------------------------------------------------------------------
+21)ls -x:
+description:
+  -x     list entries by lines instead of by columns
+output:
+raakin@ubuntu-25:~$ ls -x
+Desktop    Documents  Downloads  linx  Music  newc  Pictures  Public  snap
+Templates  Videos
+remark:
+The command ls -x in Linux lists files and directories in a horizontal, comma-separated format across the terminal screen, filling each line before moving to the next one.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+part -2 of the activity-1:
+explore the following commands:
+1)whoami:
+description:
+whoami - print effective user name
+output:
+raakin@ubuntu-25:~$ whoami
+raakin
+remarks:The whoami command in Linux outputs the username of the current user logged into the session, helping to identify the effective user running the command or script.
+
+-------------------------------------------------------------------
+2)pwd:
+description:
+   pwd - print name of current/working directory
+output:
+raakin@ubuntu-25:~$ pwd
+/home/raakin
+remarks:The pwd command in Linux stands for "print working directory" and it displays the absolute path of the current directory the user is working in, starting from the root directory (/)
+
+--------------------------------------------------------------------
+3)cd:
+output:
+raakin@ubuntu-25:~$ cd Pictures
+raakin@ubuntu-25:~/Pictures$ pwd
+/home/raakin/Pictures
+remarks:
+The cd command in Linux is used to change the current working directory to a specified directory; if used without any argument, it takes the user to their home directory.
+
+-------------------------------------------------------------------
+3)cd /:
+output:
+raakin@ubuntu-25:~$ cd Pictures
+raakin@ubuntu-25:~/Pictures$ cd /
+raakin@ubuntu-25:/$ 
+remark:
+The command cd / in Linux changes the current directory to the root directory, which is the top-level directory in the filesystem hierarchy.
+
+---------------------------------------------------------------------
+4)cd <space>:
+output:
+raakin@ubuntu-25:~$ cd Pictures
+raakin@ubuntu-25:~/Pictures$ cd 
+raakin@ubuntu-25:~$ 
+remark:
+ running cd alone or with no arguments will take the user to their home directory.
+
+---------------------------------------------------------------------
+5)cd <space> <path>
+output:
+raakin@ubuntu-25:~$ cd "Pictures"
+raakin@ubuntu-25:~/Pictures$ 
+remark:
+When using the cd command in Linux followed by a space and then a directory path (e.g., cd <space><path>), it changes the current directory to the given path.
+If the path contains spaces, it must be enclosed in quotes or have spaces escaped with a backslash (\) for the command to work correctly. 
+
+----------------------------------------------------------------------
+6)tree:
+output:
+raakin@ubuntu-25:~$ tree -l
+.
+├── Desktop
+├── Documents
+├── Downloads
+│   ├── im.jpeg
+│   └── Negus C. Linux Bible 10ed 2020Negus C. Linux Bible 10ed 2020.pdf
+├── linx
+│   ├── demo.sh
+│   └── sum.sh
+├── Music
+├── newc
+│   ├── a.out
+│   ├── hi.c
+│   └── prac.c
+├── Pictures
+│   └── im.jpeg
+├── Public
+├── snap
+│   ├── firefox
+│   │   ├── 6700
+│   │   ├── 6738
+│   │   ├── common
+│   │   └── current -> 6700  [recursive, not followed]
+│   ├── firmware-updater
+│   │   ├── 167
+│   │   ├── common
+│   │   └── current -> 167  [recursive, not followed]
+│   ├── prompting-client
+│   │   ├── 104
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── common
+│   │   └── current -> 104  [recursive, not followed]
+│   ├── snapd-desktop-integration
+│   │   ├── 253
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── 315
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── common
+│   │   └── current -> 315  [recursive, not followed]
+│   ├── snap-store
+│   │   ├── 1270
+│   │   ├── common
+│   │   └── current -> 1270  [recursive, not followed]
+│   └── terminal-parrot
+│       ├── 92
+│       ├── common
+│       └── current -> 92  [recursive, not followed]
+├── Templates
+└── Videos
+
+62 directories, 8 files
+remark:
+The tree command in Linux displays the directory structure in a visual, tree-like format that shows files and folders hierarchically, 
+making it easier to understand the organization of nested directories and their contents.
+It can be customized with options to include hidden files, limit depth, and show additional file details.
+----------------------------------------------------------------------------------------
+7)tree -l -L 1:
+output:
+raakin@ubuntu-25:~$ tree -l -L 1
+.
+├── Desktop
+├── Documents
+├── Downloads
+├── linx
+├── Music
+├── newc
+├── Pictures
+├── Public
+├── snap
+├── Templates
+└── Videos
+
+12 directories, 0 files
+remarks:
+The command tree -l -L 1 in Linux displays the directory structure of the current directory (or specified directory) with the following specifics:
+-l option: makes the command follow symbolic links as if they were directories.
+-L 1 option: limits the depth of the tree output to only one level, showing only the immediate contents (files and subdirectories) of the specified directory without recursing further into subdirectories.
+---------------------------------------------------------------------------------------------
+8)tree -l -L 2:
+output:
+raakin@ubuntu-25:~$ tree -l -L 2
+.
+├── Desktop
+├── Documents
+├── Downloads
+│   ├── im.jpeg
+│   └── Negus C. Linux Bible 10ed 2020Negus C. Linux Bible 10ed 2020.pdf
+├── linx
+│   ├── demo.sh
+│   └── sum.sh
+├── Music
+├── newc
+│   ├── a.out
+│   ├── hi.c
+│   └── prac.c
+├── Pictures
+│   └── im.jpeg
+├── Public
+├── snap
+│   ├── firefox
+│   ├── firmware-updater
+│   ├── prompting-client
+│   ├── snapd-desktop-integration
+│   ├── snap-store
+│   └── terminal-parrot
+├── Templates
+└── Videos
+
+18 directories, 8 files
+remark:
+The command tree -l -L 2 in Linux displays the directory structure with the following options:
+-l: Follows symbolic links as if they were directories.
+-L 2: Limits the display depth to two levels, showing the current directory, its immediate subdirectories, and their contents without further recursion.
+
+-----------------------------------------------------------------------------
+9)tree -l -L 3:
+output:
+aakin@ubuntu-25:~$ tree -l -L 3
+.
+├── Desktop
+├── Documents
+├── Downloads
+│   ├── im.jpeg
+│   └── Negus C. Linux Bible 10ed 2020Negus C. Linux Bible 10ed 2020.pdf
+├── linx
+│   ├── demo.sh
+│   └── sum.sh
+├── Music
+├── newc
+│   ├── a.out
+│   ├── hi.c
+│   └── prac.c
+├── Pictures
+│   └── im.jpeg
+├── Public
+├── snap
+│   ├── firefox
+│   │   ├── 6700
+│   │   ├── 6738
+│   │   ├── common
+│   │   └── current -> 6700  [recursive, not followed]
+│   ├── firmware-updater
+│   │   ├── 167
+│   │   ├── common
+│   │   └── current -> 167  [recursive, not followed]
+│   ├── prompting-client
+│   │   ├── 104
+│   │   ├── common
+│   │   └── current -> 104  [recursive, not followed]
+│   ├── snapd-desktop-integration
+│   │   ├── 253
+│   │   ├── 315
+│   │   ├── common
+│   │   └── current -> 315  [recursive, not followed]
+│   ├── snap-store
+│   │   ├── 1270
+│   │   ├── common
+│   │   └── current -> 1270  [recursive, not followed]
+│   └── terminal-parrot
+│       ├── 92
+│       ├── common
+│       └── current -> 92  [recursive, not followed]
+├── Templates
+└── Videos
+
+38 directories, 8 files
+
+remarks:
+The command tree -l -L 3 in Linux displays the directory structure up to a depth of three levels, following symbolic links as if they were directories, so it shows the current directory, 
+its subdirectories, their subdirectories, and their contents up to three levels deep,including any linked directories treated as real directories.
+
+-----------------------------------------------------------------------------
+10)tree /var/log/apt -La 1 :
+output:
+raakin@ubuntu-25:~$ tree /var/log/apt -La 1
+/var/log/apt
+├── eipp.log.xz
+├── history.log
+└── term.log
+remarks:
+The command tree /var/log/apt -La 1 in Linux does the following:
+tree: Displays the directory structure in a tree-like format.
+/var/log/apt: Specifies the directory path to display.
+-L 1: Limits the display depth to 1, showing only the contents of the specified directory (no subdirectories recursively).
+-a: Includes all files, including hidden files (that start with a dot).
+-l: Follows symbolic links as if they were directories.
+
+---------------------------------------------------------------------------
