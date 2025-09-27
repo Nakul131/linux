@@ -1,0 +1,57 @@
+ASSIGNMENT-04
+
+Name:Nakul Mahlathkar
+USN:ENG24CY0037
+Rollno:07
+Section:”A”
+
+1.	Extract usernames from /etc/passwd using grep and tee?
+To get the usernames (usernames refer to the first column in /etc/passwd which is separated by : ) use:
+cut -d: -f1 /etc/passwd | tee usernames.txt
+•	cut -d: -f1: Extracts the first field (username).
+•	tee usernames.txt: Writes the output to usernames.txt and displays it on screen.
+2. Binary not found in $PATH — use which, find, locate?
+•	which : Checks if binary is in $PATH.
+•	find / -type f -name 2>/dev/null: Searches entire system for the binary.
+•	locate : Uses a prebuilt index to find the file quickly.
+To fix the issue:
+•	If the binary is found, just add its directory to the $PATH:export PATH=$PATH:/path/to/binary 
+3. Find .log files modified in last 24 hours and save to file?
+find /var/log -name "*.log" -mtime -1 > log_report.txt
+•	-mtime -1: Modified in last 24 hours.
+•	Redirects output to log_report.txt.
+4. Difference: shutdown -r now vs reboot?
+CommandDescriptionshutdown -r nowShuts down and restarts the system immediately with proper notifications to logged-in users.rebootImmediately restarts the system, similar to shutdown -r, but might skip some user notifications depending system configuration.
+5. Debug a script using tee for stdout and stderr?
+./yourscript.sh > >(tee output.log) 2> >(tee error.log &2)
+•	Stdout is written to output.log while stderr is written to error.log. 
+•	Both streams are also printed on the display. 
+6. Three real-world applications of Linux in industries?
+Web Servers: Apache, Nginx on Linux are hosting most of the world’s websites. 
+•	Embedded Systems: Linux is used in IoT devices, smart TVs, and routers (e.g., OpenWrt). 
+•	Cloud Computing: Linux is the backbone of cloud platforms like AWS, Azure, and Google Cloud. 
+7. Differences: Application, System, and Utility Software in Linux?
+Software Type	Description	Example (Linux)
+System Software	Manages hardware & core OS functionality	Linux Kernel, GRUB
+Utility Software	Performs system maintenance tasks	fsck, top, du
+Application Software	User-centric programs for specific tasks	Firefox, LibreOffice
+8. What’s the difference between open-source and proprietary operating systems? (CO2)
+Open-source	Proprietary
+Free to use and modify	Usually paid and closed-source
+Community-supported	Supported by vendors (like Microsoft)
+Examples: Linux, FreeBSD	Examples: Windows, macOS
+With open-source, you get more freedom. With proprietary, you get official support but less control.
+
+9. How do I check the system’s kernel version? (CO3)
+Simple:
+uname -r
+This shows something like: 6.5.0-25-generic — that’s your Linux kernel version
+
+10. What’s the difference between head and tail? (CO1)
+•	head: Shows the first lines of a file.
+•	head -n 5 filename.txt
+•	tail: Shows the last lines of a file.
+•	tail -n 5 filename.txt
+These are useful when you're checking logs or previewing a file.
+
+
