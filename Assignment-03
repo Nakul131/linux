@@ -1,0 +1,71 @@
+Assignment-3
+
+Name:Nakul Mahlathkar
+USN:ENG24CY0037
+Rollno:07
+Section:”A”
+
+
+1.Distinguish between man and whatis command.
+ANS:
+Man-> displace the manual page off command with full details(syntax, options, description) 
+Whatis-> gives the one line description of the command.
+Eg:man ls
+Eg:ls
+Outputslist directory contents
+
+2.use the tee command to save the output of ls -l into a file while also displaying it?
+ANS:
+In bash ls -l | tee output.txt
+->displays the output ls -l on the terminal.
+->saves the same output in output.txt.
+
+3. Explain with an example how the tee command can be used in logging.
+ANS:
+Eg:  in bash
+ping -c  4  google.com | tee ping_log.txt
+displays the ping result live.
+saves a copy in  ping_log.txt for later review.
+
+4.steps to install ubuntu 25.04 LTS on oracle virtual box?
+ANS:
+1download Ubuntu 25.04 LTS on Oracle VirtualBox.
+2open VirtualBox -> click new-> give name example Ubuntu
+3choose type = Linux version = Ubuntu 64 bit
+4allocate ram example 4GB
+5create a virtual disk example 30 GB, VDI format
+6—> go to VM settings-> storage-> downloaded ISO file
+7start the VM-> open to installer launches.
+8select language, keyboard, installation type.
+9partition disc automatically or manually.
+10complete setup-> restart VM-> Ubuntu 25.04 boots up
+
+5. Kernel panic error during Ubuntu installation( troubleshooting ).
+ANS
+check ISO integrity: verify download ISI file with checksum.
+increse VM resourses: allocate more ram like minimum 2 GB and CPU cores.
+Enable virtualization: Ensure VT-x/AMD-V is enabled in BIOS.
+change VM settings:
+       ~>system ->Enable I/O APIC.
+       ~>system->chipset=ICH9.
+6. Command to display host name + change using sysctl.
+.dislay hostname:
+In bash:
+host name
+.change hostname using sysctl:
+In bash:
+Sudo sysctl kernal.hostname=newname
+7. Command to show calendar of August 1984?
+ANS:
+Cal 8 1984
+8. command to dislay system uptime and logged-in users together?
+ANS:
+In bash
+->W
+9.Use find to list all “.c” files in/home/user?
+ANS:
+In bash:
+Chmod 600 filename
+->6=read+write for owner.
+->0=no permission for group and others.
+
