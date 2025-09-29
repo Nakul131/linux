@@ -4,7 +4,7 @@ man command:
 description:
 do not ignore entries starting with .
 output:
-raakin@ubuntu-25:~$ ls -a
+nakul@ubuntu-25:~$ ls -a
 .              .bashrc  Documents  Music     Public                     Templates                                 .vboxclient-hostversion-tty2-control.pid     Videos
 ..             .cache   Downloads  newc      snap                       .vboxclient-clipboard-tty2-control.pid    .vboxclient-seamless-tty2-control.pid        .viminfo
 .bash_history  .config  linx       Pictures  .ssh                       .vboxclient-clipboard-tty2-service.pid    .vboxclient-vmsvga-session-tty2-control.pid
@@ -17,7 +17,7 @@ Lists all files and directories, including hidden ones (those starting with a do
 description:
 print C-style escapes for nongraphic characters
 output:
-raakin@ubuntu-25:~$ ls -b
+nakul@ubuntu-25:~$ ls -b
 Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
 remark:
 Prints C-style escapes for non-graphic characters in filenames .
@@ -27,7 +27,7 @@ Prints C-style escapes for non-graphic characters in filenames .
 description:
 with -lt: sort by, and show, ctime (time of last change of file status information); with -l: show ctime and sort by name; otherwise: sort by ctime, newest first
 output:
-raakin@ubuntu-25:~$ ls -c
+nakul@ubuntu-25:~$ ls -c
 snap  newc  Downloads  Pictures  linx  Documents  Music  Public  Videos  Templates  Desktop
 remark:
 When combined with the -t flag, it sorts files by their status change time (ctime) instead of their modification time.
@@ -38,7 +38,7 @@ description:
 -d, --directory
               list directories themselves, not their contents
 output:
-raakin@ubuntu-25:~$ ls -d
+nakul@ubuntu-25:~$ ls -d
 .
 remark:
 Lists directories themselves rather than their contents.
@@ -48,7 +48,7 @@ Lists directories themselves rather than their contents.
 description:
  -f     do not sort, enable -aU, disable -ls --color
 output:
-raakin@ubuntu-25:~$ ls -f
+nakul@ubuntu-25:~$ ls -f
 .vboxclient-vmsvga-session-tty2-control.pid  .vboxclient-vmsvga-session-tty2-service.pid  snap	     .profile				       .ssh
 Documents				     ..						  Downloads  .sudo_as_admin_successful		       .vboxclient-clipboard-tty2-service.pid
 .cache					     newc					  linx	     Videos				       Templates
@@ -62,7 +62,7 @@ Lists entries in the order they're stored in the directory, without sorting them
 description:
   -g     like -l, but do not list owner
 output:
-raakin@ubuntu-25:~$ ls -g
+nakul@ubuntu-25:~$ ls -g
 total 44
 drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Desktop
 drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Documents
@@ -84,7 +84,7 @@ description:
  -h, --human-readable
               with -l and -s, print sizes like 1K 234M 2G etc.
 output:
-raakin@ubuntu-25:~$ ls -h
+nakul@ubuntu-25:~$ ls -h
 Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
 remark:
 When used with a long listing (-l), it prints file sizes in human-readable format (e.g., 1K, 234M, 2G).
@@ -94,7 +94,7 @@ description:
 -i, --inode
               print the index number of each file
 output:
-raakin@ubuntu-25:~$ ls -i
+nakul@ubuntu-25:~$ ls -i
 1480371 Desktop  1480375 Documents  1480372 Downloads  1480657 linx  1480376 Music  1483040 newc  1480377 Pictures  1480374 Public  1480240 snap  1480373 Templates  1480378 Videos
 remark:
 Prints the inode index number to the left of each filename.
@@ -105,7 +105,7 @@ description:
  -k, --kibibytes
               default to 1024-byte blocks for file system usage; used only with -s and per directory totals
 output:
-raakin@ubuntu-25:~$ ls -k
+nakul@ubuntu-25:~$ ls -k
 Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
 remark:
 the ls -k command lists directory contents and shows file sizes in kilobytes.
@@ -115,7 +115,7 @@ the ls -k command lists directory contents and shows file sizes in kilobytes.
 description:
 -l     use a long listing format
 output:
-raakin@ubuntu-25:~$ ls -l
+nakul@ubuntu-25:~$ ls -l
 total 44
 drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Desktop
 drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Documents
@@ -135,7 +135,7 @@ s -l lists all files and directories in the current directory in a detailed, lon
 description:
  -m     fill width with a comma separated list of entries
 output:
-raakin@ubuntu-25:~$ ls -m
+nakul@ubuntu-25:~$ ls -m
 Desktop, Documents, Downloads, linx, Music, newc, Pictures, Public, snap, Templates, Videos
 remark:
 ls -m displays the contents of a directory in a single line, with each entry separated by a comma.
@@ -145,7 +145,7 @@ description:
 -n, --numeric-uid-gid
               like -l, but list numeric user and group IDs
 output:
-raakin@ubuntu-25:~$ ls -n
+nakul@ubuntu-25:~$ ls -n
 total 44
 drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Desktop
 drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Documents
@@ -165,7 +165,7 @@ ls -n displays a long list of directory contents, but it uses the user and group
 description:
 like -l, but do not list group information
 output:
-raakin@ubuntu-25:~$ ls -o
+nakul@ubuntu-25:~$ ls -o
 total 44
 drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Desktop
 drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Documents
@@ -187,7 +187,7 @@ descriprion:
  -p, --indicator-style=slash
               append / indicator to directories
 output:
-raakin@ubuntu-25:~$ ls -p
+nakul@ubuntu-25:~$ ls -p
 Desktop/    Downloads/  Music/  Pictures/  snap/       Videos/
 Documents/  linx/       newc/   Public/    Templates/
 remark:
@@ -199,7 +199,7 @@ description:
  -q, --hide-control-chars
               print ? instead of nongraphic characters
 output:
-raakin@ubuntu-25:~$ ls -q
+nakul@ubuntu-25:~$ ls -q
 Desktop    Downloads  Music  Pictures  snap       Videos
 Documents  linx       newc   Public    Templates
 remarks:
@@ -211,7 +211,7 @@ description:
    -r, --reverse
               reverse order while sorting
 output:
-raakin@ubuntu-25:~$ ls -r
+nakul@ubuntu-25:~$ ls -r
 Videos     snap    Pictures  Music  Downloads  Desktop
 Templates  Public  newc      linx   Documents
 remarks:
@@ -223,7 +223,7 @@ description:
    -S     sort by file size, largest first
 
 output:
-raakin@ubuntu-25:~$ ls -s
+nakul@ubuntu-25:~$ ls -s
 total 44
 4 Desktop    4 Downloads  4 Music  4 Pictures  4 snap       4 Videos
 4 Documents  4 linx       4 newc   4 Public    4 Templates
@@ -234,8 +234,7 @@ The command ls -s in Linux displays the size of each file in blocks alongside th
 18)ls -t:
 description:
   -t     sort by time, newest first; see --time
-output:
-raakin@ubuntu-25:~$ ls -t
+output:nakul@ubuntu-25:~$ ls -t
 linx  Downloads  Pictures   Music   Videos     Desktop
 newc  snap       Documents  Public  Templates
 remark:
@@ -246,7 +245,7 @@ The command ls -t in Linux sorts and lists files and directories by modification
 description:
    -U     do not sort; list entries in directory order
 output:
-raakin@ubuntu-25:~$ ls -u
+nakul@ubuntu-25:~$ ls -u
 Desktop    snap  Videos    newc   Documents  Public
 Templates  linx  Pictures  Music  Downloads
 remark:
@@ -257,7 +256,7 @@ The command ls -u in Linux lists files and directories, sorting and displaying t
 description:
 -v     natural sort of (version) numbers within text
 output:
-raakin@ubuntu-25:~$ ls -v
+nakul@ubuntu-25:~$ ls -v
 Desktop    Downloads  Pictures  Templates  linx  snap
 Documents  Music      Public    Videos     newc
 remark:
@@ -267,8 +266,7 @@ The command ls -v in Linux sorts and lists files in a natural version sort order
 21)ls -x:
 description:
   -x     list entries by lines instead of by columns
-output:
-raakin@ubuntu-25:~$ ls -x
+output:nakul@ubuntu-25:~$ ls -x
 Desktop    Documents  Downloads  linx  Music  newc  Pictures  Public  snap
 Templates  Videos
 remark:
@@ -283,8 +281,8 @@ explore the following commands:
 description:
 whoami - print effective user name
 output:
-raakin@ubuntu-25:~$ whoami
-raakin
+nakul@ubuntu-25:~$ whoami
+nakul
 remarks:The whoami command in Linux outputs the username of the current user logged into the session, helping to identify the effective user running the command or script.
 
 -------------------------------------------------------------------
@@ -292,42 +290,41 @@ remarks:The whoami command in Linux outputs the username of the current user log
 description:
    pwd - print name of current/working directory
 output:
-raakin@ubuntu-25:~$ pwd
-/home/raakin
+nakul@ubuntu-25:~$ pwd
+/home/nakul
 remarks:The pwd command in Linux stands for "print working directory" and it displays the absolute path of the current directory the user is working in, starting from the root directory (/)
 
 --------------------------------------------------------------------
 3)cd:
 output:
-raakin@ubuntu-25:~$ cd Pictures
-raakin@ubuntu-25:~/Pictures$ pwd
+nakul@ubuntu-25:~$ cd Pictures
+nakul@ubuntu-25:~/Pictures$ pwd
 /home/raakin/Pictures
 remarks:
 The cd command in Linux is used to change the current working directory to a specified directory; if used without any argument, it takes the user to their home directory.
 
 -------------------------------------------------------------------
 3)cd /:
-output:
-raakin@ubuntu-25:~$ cd Pictures
-raakin@ubuntu-25:~/Pictures$ cd /
-raakin@ubuntu-25:/$ 
+output:nakul@ubuntu-25:~$ cd Pictures
+nakul@ubuntu-25:~/Pictures$ cd /
+nakul@ubuntu-25:/$ 
 remark:
 The command cd / in Linux changes the current directory to the root directory, which is the top-level directory in the filesystem hierarchy.
 
 ---------------------------------------------------------------------
 4)cd <space>:
 output:
-raakin@ubuntu-25:~$ cd Pictures
-raakin@ubuntu-25:~/Pictures$ cd 
-raakin@ubuntu-25:~$ 
+nakul@ubuntu-25:~$ cd Pictures
+nakul@ubuntu-25:~/Pictures$ cd 
+nakul@ubuntu-25:~$ 
 remark:
  running cd alone or with no arguments will take the user to their home directory.
 
 ---------------------------------------------------------------------
 5)cd <space> <path>
 output:
-raakin@ubuntu-25:~$ cd "Pictures"
-raakin@ubuntu-25:~/Pictures$ 
+nakul@ubuntu-25:~$ cd "Pictures"
+nakul@ubuntu-25:~/Pictures$ 
 remark:
 When using the cd command in Linux followed by a space and then a directory path (e.g., cd <space><path>), it changes the current directory to the given path.
 If the path contains spaces, it must be enclosed in quotes or have spaces escaped with a backslash (\) for the command to work correctly. 
@@ -335,7 +332,7 @@ If the path contains spaces, it must be enclosed in quotes or have spaces escape
 ----------------------------------------------------------------------
 6)tree:
 output:
-raakin@ubuntu-25:~$ tree -l
+nakul@ubuntu-25:~$ tree -l
 .
 ├── Desktop
 ├── Documents
@@ -415,7 +412,7 @@ It can be customized with options to include hidden files, limit depth, and show
 ----------------------------------------------------------------------------------------
 7)tree -l -L 1:
 output:
-raakin@ubuntu-25:~$ tree -l -L 1
+nakul@ubuntu-25:~$ tree -l -L 1
 .
 ├── Desktop
 ├── Documents
@@ -437,7 +434,7 @@ The command tree -l -L 1 in Linux displays the directory structure of the curren
 ---------------------------------------------------------------------------------------------
 8)tree -l -L 2:
 output:
-raakin@ubuntu-25:~$ tree -l -L 2
+nakul@ubuntu-25:~$ tree -l -L 2
 .
 ├── Desktop
 ├── Documents
@@ -474,7 +471,7 @@ The command tree -l -L 2 in Linux displays the directory structure with the foll
 -----------------------------------------------------------------------------
 9)tree -l -L 3:
 output:
-aakin@ubuntu-25:~$ tree -l -L 3
+nakul@ubuntu-25:~$ tree -l -L 3
 .
 ├── Desktop
 ├── Documents
@@ -531,7 +528,7 @@ its subdirectories, their subdirectories, and their contents up to three levels 
 -----------------------------------------------------------------------------
 10)tree /var/log/apt -La 1 :
 output:
-raakin@ubuntu-25:~$ tree /var/log/apt -La 1
+nakul@ubuntu-25:~$ tree /var/log/apt -La 1
 /var/log/apt
 ├── eipp.log.xz
 ├── history.log
