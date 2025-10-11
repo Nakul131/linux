@@ -1,0 +1,143 @@
+ASSIGNMENT -08
+NAME:NAKUL MAHLATHKAR 
+USN:ENG24CY0037 
+SECTION: “A” 
+ROLL NO: 7 
+
+
+1.  What is a user-defined function in shell scripting? Explain with an example.
+Ans:
+A user-defined function is a block of resuable code created by the user to perform a specific task. It also avoids repetition and makes scripts modular.
+Ex: #!/bin/bash
+greet() {
+	echo “Hello,  $1!”
+}
+greet  “Nakul”
+
+Output:
+Hello,  Nakul!
+
+
+
+
+2. Write a bash script with a function that multiply two integer numbers.
+Ans :
+#!/bin/bash
+multiply() {
+	result=$(( $1 * $2 ))
+	echo “product: $result”
+}
+echo  “enter first number:”
+read a
+ echo  “enter second number:”
+read b
+multiply $a $b
+
+Output: Enter first number: 5
+Enter second number: 4
+Product: 20
+
+3. Explain how arrays (1D, 2D, and 3D) are declared in bash scripting.
+Ans:
+	1D Array:
+arr=(10 20 30 40)
+echo ${arr[2]}
+Output: 30
+	2D Array:
+arr2D=(1 2 3 4 5 6 7 8 9)
+rows=3; cols=3
+index=$(( (2-1)*cols + (3-1) ))
+echo ${arr2D[$index]}   
+Output: 6
+	3D Array:
+      		 declare -A arr3D
+    		 arr3D["0,0,1"]=20
+       		 echo ${arr3D["0,0,1"]}  
+ 	Output: 20
+
+4. Write a shell script to display elements of an array.
+Ans:
+#!/bin/bash
+arr=(apple banana mango orange)
+echo "Array elements:"
+for item in "${arr[@]}"
+do
+  echo "$item"
+done
+
+Output: 
+Array elements:
+apple
+banana
+mango
+orange
+
+
+
+5. What is the purpose of cron in Linux?
+Ans:
+Cron is a time-based job schedular used to automatically execute commands or scripts at fixed times, dates, or intervals.
+Ex: daily backups, log cleanup
+
+6. Write a cron job to run a backup script every day at midnight.
+Ans:
+Open the cron table using:
+crontab -e
+Add this line:
+0 0 * * * /home/user/backup.sh
+Rubs backup.sh every day at 00:00 midnight.
+
+      
+7. How do you schedule a one-time job using at command?
+Ans:
+The at command schedules a single job for  a specific time.
+Ex:
+at 10:30 PM
+at> /home/user/backup.sh
+at> <Ctrl+D>
+This runs backup.sh once at 10:30 PM.
+       
+
+
+
+8. Write a script to display disk usage using df and du.
+Ans:
+#!/bin/bash
+echo "Disk space usage:"
+df -h
+echo "Directory usage details:"
+du -sh *
+
+Output:
+Disk space usage:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        50G   20G   30G  40% /
+Directory usage details:
+1.2G  Documents
+800M  Downloads
+
+
+9. How can you log the output of a script using the tee command?
+Ans:
+Use the tee command to display and save output at the same time.
+Ex:
+#!/bin/bash
+echo "System update log:" | tee update_log.txt
+sudo apt update | tee -a update_log.txt
+Output appears on screen and gets saved in update_log.txt.
+
+    
+10. Explain with an example how shell scripting can automate system administration tasks.
+Ans:
+Shell scripts can automate tasks like backups, system updates, and log cleaning.
+Ex:  Automatic Backup Script
+#!/bin/bash
+backup_file="/backup/home_$(date +%F).tar.gz"
+tar -czf $backup_file /home/user
+echo "Backup completed on $(date)" >> /var/log/backup.log
+Schedule it using cron:
+0 0 * * * /home/user/backup.sh
+Automatically creates daily backups at midnight.
+       
+
+
