@@ -1,0 +1,69 @@
+ASSIGNMENT -05
+NAME:NAKUL MAHLATHKAR
+USN:ENG24CY0037
+SECTION: “A”
+ROLL NO: 7
+
+1.what is a shell in linux OS?how many catagories of shell currently exist in Linux?why bash is very popular in Linux distribution?
+ANS:
+A shell is a command-line interpreter that provides in the interface between the user and kernal.It takes user commands, interpts them and executes them.
+->categories of shells in linux:
+  Bourne shell family:sh,bash,ksh,zsh,dash
+   C Shell family:csh,tcsh
+Bash is very popular because:
+   it is default shell in most Linux distribution.
+   supports command history , auto -completion,scripting  features and portability.
+Backward-compatibilty with Bourne shell.
+2. what does the ls -Z command  display?
+ANS:
+It display SELinux security contexts like user ,role,type and level of files and directories.
+Eg:
+-rw-r—r--. Root Root unconfined_u:object_r:admin_home_t:s0 file.text
+3.write a command to list all hidden files un current dictionary?
+ANS:
+ls -a
+
+
+4.diffrence between hard link and soft links?
+ANS:
+Feature	Hard Link	Soft Link (Symbolic Link)
+Points to	Actual file data on disk (inode)	File name/path
+Works across FS?	No	Yes
+File deleted?	Data remains until all hard links are deleted	Becomes broken ("dangling link") if target is deleted
+Created with	ln	ln -s
+
+5.A file has permission -rwxr-x—x. Explain who can read,write, and execute it?
+ANS:
+owner(rwx)->read,write,execute
+Group(r-x)->read,execute
+others(--X)->execute only
+
+6.write a command to change the group ownership of a file data.txt to group staff?
+ANS:
+In Bash:
+Chgrp staff data.txt
+
+7.why is it dangerous to give 777 permissions to a file? Explain with an example .
+ANS:
+777 means read and write execute permission for everyone (owner, group)
+Danger:Any user can modify,delete or excute the file(security risk).
+Example:If a script backup dot SH hash 777, any user could edit it to run malicious commands  and if root executes it system could be compromised
+
+8.Difference between apropos (man -k) and whatis (man -f)?
+ANS:
+Whatis ->shows a one-line description of a command.
+Apropos->searches all man page descriptions for a Keyword.
+
+9.write a command to redirect the error output of a command to a file named error.log?
+ANS:
+In bash:
+Command 2> error.log
+Example:
+Ls /fakepath 2> error.log
+
+10.How can you use the tee command to append output to a file instead of overwriting it?
+ANS:
+In bash:
+Command | tee -a filename
+Example:
+Ls | tee -a output.txt
