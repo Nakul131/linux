@@ -1,0 +1,81 @@
+ASSIGNMENT -06
+NAME:NAKUL MAHLATHKAR
+USN:ENG24CY0037
+SECTION: “A”
+ROLL NO: 7
+
+
+1.which command is used to list the contents of a directory? Justify with proper example.
+ANS:
+Command: ls
+Eg: ls /home/student
+This lists all files and directories under /home/student.
+Like ls -1 gives detailed information (permission ,size,owner)
+
+
+2.write the command to create new directory named 123test_die.
+ANS:
+Command:
+mkdir 123test_dir
+
+3.what is the purpose of sed command? Justify with proper example.
+ANS:
+purpose:  sed is a stream editor used to search ,replace,delete or transform text in a file .
+eg: Replace the word Linux with Ubuntu in file.txt:
+Sed ‘s/Linux/Ubuntu/g’ file.txt
+
+4.which distinct command is used to display one-line descriptions of any command?
+ANS:  
+   Command:
+        Whatis command_name
+Eg:
+Whatis ls
+Output:
+Ls (1) – list directory contents
+
+5.write the command to create an empty file named “notes.txt”?
+ANS:
+Command:
+Touch notes.txt
+
+6. Difference between grep and awk commands with an example?
+ANS:
+grep used for searching specific patterns in text.
+Eg:
+grep “error” logfile.txt
+Displays all lines containing error.
+awk:Used for pattern scanning and text processing (filed-based).
+In bash:
+awk  ‘{print $1, $3}’ loffile.txt
+7. Write the command to give read, write and execute permission to the owner of a file script.sh.
+ANS:
+In bash 
+chmod u+rwx script.sh
+8.How is chown different from chgrp ? give one  example for each.
+ANS: 
+chown:changes owner of a file.
+Eg:
+In bash:
+Sudo chown user1 script.sh
+chgrp:changes the group ownership of a file.
+Eg:
+In bash:
+Chgrp developers script.sh
+9. A user complaints that they cannot execute a file even that thought it exists in directories. How would you troubleshoot this using ls -l,chmod and whoami?
+ANS:
+STEPS:
+1.check file permission:
+Ls -1 script.sh
+Output:
+-rw-r--r-- 1 user user 120 Oct 10 10:00 script.sh
+2. give excute permission :
+Bash:
+Chmod +x script.sh
+3.verify the user identify:
+Bash:
+whoami
+10. Design a command pipeline to: find all. Log files modified in last two days in /var//log,display them on screen and save the results into a file recent_logs,txt using tee command.
+ANS:
+Command:
+find /var/log -name "*.log" -mtime -2 | tee recent_logs.txt
+
